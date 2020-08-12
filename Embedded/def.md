@@ -1,5 +1,7 @@
 # 関数 (Function)
 
+関数の詳細は`shift+tab`で確認することができます。
+
 
 ```python
 def function_name(param1, param2):
