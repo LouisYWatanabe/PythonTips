@@ -18,26 +18,34 @@
 
 **$Memo$**
 - [**組み込み関数**](./Embedded.md)
-  - [リスト](./Embedded/list.md)
-  - [辞書型](./Dictionary/dictionary.md)
+    - データタイプ
+        - [数値型と基本操作](./Embedded/DataType.md)
+
+        - [文字型と基本操作（split join）](./Embedded/Strings.md)
+        - [リスト](./Embedded/list.md)
+        - [辞書型](./Embedded/Dictionary.md)
+        - [Boolean型](./Embedded/Boolean.md)
+        - [タプル](./Embedded/Taples.md)
+        - [Set](./Embedded/Set.md)
+    - [型変換　キャスティング](./Embedded/Casting.md)
 
 - [**ライブラリ**](./Library.md)
-	- [numpy](./Library/numpy.md)
-	- [pandas](./Library/pandas.md)
-	- [Matplotlib（日本語使用：pip install japanize-matplotlib）import japanize_matplotlib](./Library/Matplotlib.md)
-		- [seaboen](./Library/seaborn.md)
-	- [scikit-learn](./Library/scikit-learn.md)
-	- [statsmodels](./Library/statsmodels.md)
+    - [numpy](./Library/numpy.md)
+    - [pandas](./Library/pandas.md)
+    - [Matplotlib（日本語使用：pip install japanize-matplotlib）import japanize_matplotlib](./Library/Matplotlib.md)
+        - [seaboen](./Library/seaborn.md)
+    - [scikit-learn](./Library/scikit-learn.md)
+    - [statsmodels](./Library/statsmodels.md)
 
-	- [TensorFlow](./Library/tensorflow.md)
-	- [keras](./Library/keras.md)
-	- [PyTorch](./Library/torch.md)
+    - [TensorFlow](./Library/tensorflow.md)
+    - [keras](./Library/keras.md)
+    - [PyTorch](./Library/torch.md)
 
-	- [opencv](./Library/opencv.md)
+    - [opencv](./Library/opencv.md)
 
-	- [XGBClassifier](./Library/scikit-learn/xgboost_XGBClassifier.md)
+    - [XGBClassifier](./Library/scikit-learn/xgboost_XGBClassifier.md)
 
-	- [nltk](./Library/nltk.md)
+    - [nltk](./Library/nltk.md)
 
 
 
@@ -48,7 +56,7 @@
 
 名前
 
-	less - more の反対 (more のようなページャー)
+    less - more の反対 (more のようなページャー)
 
 ### 書式
 
@@ -58,24 +66,24 @@
 
 ### 引数
 
-	以降の説明で ^X は control-X を意味する。 ESC は ESCAPE キー
-	である。例えば、ESC-v は "ESCAPE" を押した後に "v" を 押す
-	という意味である。
+    以降の説明で ^X は control-X を意味する。 ESC は ESCAPE キー
+    である。例えば、ESC-v は "ESCAPE" を押した後に "v" を 押す
+    という意味である。
 
-	h または H
-	　　ヘルプ。コマンドの概要を表示する。もし、他のコマンド
-	　　を忘れた時は、このコマンドを思い出すこと。
+    h または H
+    　　ヘルプ。コマンドの概要を表示する。もし、他のコマンド
+    　　を忘れた時は、このコマンドを思い出すこと。
 
-	SPACE または ^V または f または ^F
-	　　前方に 1 ウインドウ分 (N ・・
+    SPACE または ^V または f または ^F
+    　　前方に 1 ウインドウ分 (N ・・
 
 ### 例
 
-	man less
+    man less
 
 ### 説明
 
-	less は more (1) と同様なプログラムであるが、ファイル内 で
-	の・・
+    less は more (1) と同様なプログラムであるが、ファイル内 で
+    の・・
 
 ---
