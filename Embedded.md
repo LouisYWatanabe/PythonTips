@@ -10,6 +10,10 @@
         - [タプル](./Embedded/Taples.md)
         - [Set](./Embedded/Set.md)
     - [型変換　キャスティング](./Embedded/Casting.md)
+    - [演算子](./Embedded/Operator.md)
+    - [if文](./Embedded/if.md)
+        - [イテラブル(Iterable) と イテレータ(Iterator)](./Embedded/iterable.md)
+    - [関数 (Function)](./Embedded/def.md)
 
 
 [戻る](./Overallview.md)
