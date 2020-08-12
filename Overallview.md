@@ -33,6 +33,9 @@
     - [Loop文](./Embedded/for.md)
         - [イテラブル(Iterable) と イテレータ(Iterator)](./Embedded/iterable.md)
     - [関数 (Function)](./Embedded/def.md)
+    - [オブジェクトの変更可能有無 mutableとimmutable](./Embedded/mutable.md)
+    - [lambda関数](./Embedded/lambda.md)
+    - [不特定多数の引数とラッパー関数 *argsと**kwargs](./Embedded/args.md)
 
 - [**ライブラリ**](./Library.md)
     - [numpy](./Library/numpy.md)
