@@ -24,6 +24,12 @@
 	- [インデックス参照とスライス](./Library/Numpy/index.md)
 	- [ブールインデックス参照](./Library/Numpy/blueindex.md)
 	- [乱数 random](./Library/Numpy/rand.md)
+	- [統計量 標準偏差最大・最小値 標準偏差](./Library/Numpy/Statistics.md)
+	- [数学用関数 平方根 np.sqrt() 対数 np.log() 指数関数 np.exp() ネイピア数 np.e 合計 np.sum 絶対値 np.abs()](./Library/Numpy/Mathfunction.md)
+	- [NumpyにおけるNaNの扱い np.nanとnp.isnan()](./Library/Numpy/NaN.md)
+	- [ndarrayの中の要素の操作 np.clip(a, a_min, a_max) np.where() all() any() np.unique()](./Library/Numpy/ndarraycondition.md)
+	- [結合と転置 np.concatenate() np.stack() np.transposeと.T ](./Library/Numpy/stackT.md)
+	- [ndarrayの保存とロード list dictionary np.save('path', array) np.load('path')](./Library/Numpy/saveroad.md)
 
   - [pandas](./Library/pandas.md)
 	- [データフレームのメモリ削減関数](./Library/Pandas/reduce_mem_usage.md)

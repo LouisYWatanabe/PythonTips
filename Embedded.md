@@ -7,7 +7,7 @@
         - [リスト](./Embedded/list.md)
         - [辞書型](./Embedded/Dictionary.md)
         - [Boolean型](./Embedded/Boolean.md)
-        - [タプル](./Embedded/Taples.md)
+        - [タプル tuple](./Embedded/Taples.md)
         - [Set](./Embedded/Set.md)
     - [型変換　キャスティング](./Embedded/Casting.md)
     - [演算子](./Embedded/Operator.md)
