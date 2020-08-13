@@ -11,15 +11,20 @@
 		- [変数の種類の確認](./Library/Numpy/unique.md)
 		- [変換 型](./Library/Numpy/astype.md)
 		- [列の取得](./Library/Numpy/列の取得.md)
+	- [一次元 多次元配列の作成・型宣言](./Library/Numpy/stack_arrays.md)
+		- [数値のArrayを関数で作成(arange, linspace, logspace)](./Library/Numpy/arangelinspace.md)
+	- [1次元配列の追加](./Library/Numpy/stack_array.md)
+	- [1次元配列の計算](./Library/Numpy/math.md)
+	- [行列の確認・reshape・次元操作 shape expand_dims squeeze flatten](./Library/Numpy/shape.md)
+	- [行列の要素取得とスライシング](./Library/Numpy/IndexingSlicing.md)
+	- [要素を指定して行列生成 (zeros, ones, eye)](./Library/Numpy/zerosones.md)
 	- [ユニバーサル関数](./Library/Numpy/ansanble.md)
-	- [1次元配列の宣言](./Library/Numpy/stack_array.md)
-	- [行列の作成　多次元配列の宣言](./Library/Numpy/stack_arrays.md)
 	- [配列同士の連結](./Library/Numpy/array.md)
 	- [コピー](./Library/Numpy/copy&view.md)
 	- [インデックス参照とスライス](./Library/Numpy/index.md)
 	- [ブールインデックス参照](./Library/Numpy/blueindex.md)
-	- [1次元配列の計算](./Library/Numpy/math.md)
-	- [乱数](./Library/Numpy/rand.md)
+	- [乱数 random](./Library/Numpy/rand.md)
+
   - [pandas](./Library/pandas.md)
 	- [データフレームのメモリ削減関数](./Library/Pandas/reduce_mem_usage.md)
 	- [複数データの結合](./Library/Pandas/HomeCreditFeatureEngineering.md)
@@ -91,11 +96,14 @@
 
   - [Matplotlib（日本語使用：pip install japanize-matplotlib）import japanize_matplotlib](./Library/Matplotlib.md)
     - [グラフの基本表示](./Library/Matplotlib/グラフの基本表示.md)
-      - [seaboen](./Library/seaborn.md)
-        - [集計表とクロス集計](./Library/Seaborn/集計表.md)
-        - [ヒストグラム](./Library/Seaborn/hist.md)<br><br>
+
+  - [seaboen](./Library/seaborn.md)
+    - [集計表とクロス集計](./Library/Seaborn/集計表.md)
+    - [ヒストグラム](./Library/Seaborn/hist.md)<br><br>
+
   - [LightGBMとoptunaと交差検証](./Library/optuna_lgb.md)
 	- [LightGBMと複数データのEDA](./Library/PredictFutureSales/PredictFutureSales.md)
+
   - [scikit-learn](./Library/scikit-learn.md)
 	- <b>教師有り学習</b>
 		- [回帰](./Library/scikit-learn/回帰.md)

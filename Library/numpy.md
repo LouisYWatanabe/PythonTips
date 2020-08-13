@@ -12,14 +12,19 @@
 		- [変換 型](./Numpy/astype.md)
 		- [列の取得](./Numpy/列の取得.md)
 
+	- [一次元 多次元配列の作成・型宣言](./Numpy/stack_arrays.md)
+		- [数値のArrayを関数で作成(arange, linspace, logspace)](./Numpy/arangelinspace.md)
+
+	- [1次元配列の追加](./Numpy/stack_array.md)
+	- [1次元配列の計算](./Numpy/math.md)
+	- [行列の確認・reshape・次元操作 shape expand_dims squeeze flatten](./Numpy/shape.md)
+	- [行列の要素取得とスライシング](./Numpy/IndexingSlicing.md)
+	- [要素を指定して行列生成 (zeros, ones, eye)](./Numpy/zerosones.md)
 	- [ユニバーサル関数](./Numpy/ansanble.md)
-	- [1次元配列の宣言](./Numpy/stack_array.md)
-	- [行列の作成　多次元配列の宣言](./Numpy/stack_arrays.md)
 	- [配列同士の連結](./Numpy/array.md)
 	- [コピー](./Numpy/copy&view.md)
 	- [インデックス参照とスライス](./Numpy/index.md)
 	- [ブールインデックス参照](./Numpy/blueindex.md)
-	- [1次元配列の計算](./Numpy/math.md)
-	- [乱数](./Numpy/rand.md)
+	- [乱数 random](./Library/Numpy/rand.md)
 
 [全体に戻る](../Overallview.md)
