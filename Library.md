@@ -110,6 +110,13 @@
 
   - [Matplotlib（日本語使用：pip install japanize-matplotlib）import japanize_matplotlib](./Library/Matplotlib.md)
     - [グラフの基本表示](./Library/Matplotlib/グラフの基本表示.md)
+    - [プロット plt.plot()](./Library/Matplotlib/plt.plot/pltplot().md)
+    - [複数のグラフを描画する plt.subplot() plt.figure axes.set_xx()](./Library/Matplotlib/subplotfigure/subplotfigure.md)
+    - [散布図 plt.scatter()](./Library/Matplotlib/scatter/scatter.md)
+    - [ヒストグラムと棒グラフ plt.hist() plt.bar()](./Library/Matplotlib/histbar/histbar.md)
+    - [箱ひげ図 plt.boxplot()](./Library/Matplotlib/boxplot/boxplot.md)
+    - [pltの保存 savefig() PdfPages()](./Library/Matplotlib/pngpdf/pngpdf.md)
+
 
   - [seaboen](./Library/seaborn.md)
     - [集計表とクロス集計](./Library/Seaborn/集計表.md)
