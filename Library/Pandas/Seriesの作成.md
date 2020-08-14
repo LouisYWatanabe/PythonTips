@@ -45,6 +45,80 @@ kiwifruit      3
 dtype: int64
 ```
 
+```python
+# dictionaryからSeriesを作る
+data = {
+    'name': 'John',
+    'sex': 'male',
+    'age': 22
+}
+john_series = pd.Series(data)
+john_series
+```
+
+```python
+name    John
+sex     male
+age       22
+dtype: object
+```
+
+```python
+# NumPy Arrayからも作成可能
+array = np.array([100, 200, 300])
+pd.Series(array)
+```
+
+```python
+0    100
+1    200
+2    300
+dtype: int64
+```
+
+```python
+# index引数で，indexにラベルをつけることが可能
+labels = ['a', 'b', 'c']
+series = pd.Series(array, index=labels)
+series
+```
+
+```python
+a    100
+b    200
+c    300
+dtype: int64
+```
+
+```python
+# 値を取り出す
+john_series['name']
+```
+
+```python
+'John'
+```
+
+### .values
+
+```python
+# valuesで，値をnumpyとして扱える
+series.values
+```
+
+```python
+array([100, 200, 300])
+```
+
+```python
+# NumPyと同じように統計量を計算できる
+series.mean()
+```
+
+```python
+200.0
+```
+
 ### 説明
 
 辞書型のデータ（`{key1: value1, key2: value2, ...}`）を
