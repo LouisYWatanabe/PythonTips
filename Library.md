@@ -54,7 +54,13 @@
 
             - [縦連結](./Library/Pandas/concat.md)
             - [結合 merge](./Library/Pandas/merge.md)
-        - [データの表示確認（リスト）](./Library/Pandas/hyouzi.md)
+        
+		- [ユニークな値と数 .unique() .nunique()](./Library/Pandas/uniquenunique.md)
+		- [それぞれの値にいくつのレコードがあるか .value_counts() .sort_values()](./Library/Pandas/value_counts.md)
+
+		- [DataFrameのiteration  .apply() .iterrows() ](./Library/Pandas/applyiterrows.md)
+		- [ピボットテーブルの作り方 .pivot_table() .xs()](./Library/Pandas/pivot_tablexs.md)
+		- [データの表示確認（リスト）](./Library/Pandas/hyouzi.md)
         - [欠損値の有無の確認](./Library/Pandas/isnull.md)
             - [**関数** 欠損値の有無の確認](./Library/Pandas/missing_value_table.md)
         - [欠損値の削除](./Library/Pandas/dropna.md)

@@ -126,6 +126,7 @@ df2
 
 
 
+# 縦に結合
 
 ```python
 # 縦に結合
@@ -214,6 +215,7 @@ pd.concat([df1, df2])
 </div>
 
 
+# 横に結合 (axis引数を指定　デフォルトは0)
 
 
 ```python
@@ -474,9 +476,12 @@ df2
 
 
 
+# inner
+
+両方で見つかったデータのみマージ
 
 ```python
-#inner
+# inner
 df1.merge(df2, how='inner', on='Key')
 ```
 
@@ -530,10 +535,12 @@ df1.merge(df2, how='inner', on='Key')
 </div>
 
 
+# outer
 
+どちらのデータも残しつつマージできる所はマージします。
 
 ```python
-#outer
+# outer
 df1.merge(df2, how='outer', on='Key')
 ```
 
@@ -606,7 +613,7 @@ df1.merge(df2, how='outer', on='Key')
 
 
 ```python
-#left
+# left
 df1.merge(df2, how='left', on='Key')
 ```
 
@@ -671,7 +678,7 @@ df1.merge(df2, how='left', on='Key')
 
 
 ```python
-#right
+# right
 df1.merge(df2, how='right', on='Key')
 ```
 

@@ -1,59 +1,58 @@
-# csvの書き出し
+
+# DataFrameのiteration
+
+## .apply()
+
+ataFrameの各行に関数をapplyできます。
 
 ```python
-import pandas as pd
-
-# 基本
-df.to_csv('file_name.csv')
-
-# index不要のとき (kaggle submission fileは不要なので忘れがち)
-submission.to_csv('submission.csv', index=False)
-
-# csvの書き出し
-pd.to_csv('out/put/path/output.csv', encoding = 'shift-jis')
-```
-
-### 書式
-
-	df: データフレーム
-
-| path_or_buf | 出力するファイル名。省略した場合は、コンソール上に文字列として出力されます。                                                                                      |
-|-------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| sep         | 区切り文字 (デフォルト: , (カンマ) )                                                                                                                              |
-| index       | 行名を出力するかどうか。Falseを指定した場合、行名は出力されません。(デフォルト: True)                                                                             |
-| encoding    | 出力する際の文字コード。’utf-8′, ‘shift_jis’, ‘euc_jp’ などを指定。参考: Python の文字コードの一覧 (デフォルト: Python 3 の場合 “utf-8”, Python 2 の場合 “ascii”) |
-
-### 例
-
-```python
-import pandas as pd
-
-sample4_2 = pd.read_csv("sample4.csv", header=None, names=["id","class","grade","name"])
-
-sample4_2.to_csv('out/put/path/output.csv', encoding = 'shift-jis')
-```
-
-```python
-    id class  grade       name
-0    1     A      1      Satou
-1    3     B      1  Hashimoto
-2   15     B      3  Takahashi
-3  102     A      2     Aikawa
-```
-
-```python
-# profitの高い順に並べた表を保存
-# 1. csv読み込み
-df = pd.read_csv('tmdb_5000_movies.csv')
-# 2. budgetとrevenueが0のものをフィルタアウト
-df = df[~((df['revenue'] == 0) | (df['budget'] == 0))]
-# 3. profit項目作成(revenue - budget)
-df['profit'] = df.apply(lambda row: row['revenue'] - row['budget'], axis=1)
+# DataFrameの各行に関数をapplyする
+# 'budget'が0なら'budget'にNaN，0以外ならその値を返す関数
+def return_nan_if_zero(budget):
+    if budget == 0:
+        return np.nan
+    else:
+        return budget
+    
+return_nan_if_zero(0)
 ```
 
 
+
+
+    nan
+
+
+
+
 ```python
-df.head()
+# budgetカラムのSeriesにapplyすれば，各budgetに対して関数を実行した値がSeriesで返ってくる
+df_movies['budget'].apply(return_nan_if_zero)
+```
+
+
+
+
+    0       237000000.0
+    1       300000000.0
+    2       245000000.0
+    3       250000000.0
+    4       260000000.0
+               ...     
+    4798       220000.0
+    4799         9000.0
+    4800            NaN
+    4801            NaN
+    4802            NaN
+    Name: budget, Length: 4803, dtype: float64
+
+
+
+
+```python
+# それをもとのDataFrameにいれれば，カラムの値を更新できる
+df_movies['budget'] = df_movies['budget'].apply(return_nan_if_zero)
+df_movies.head()
 ```
 
 
@@ -87,7 +86,7 @@ df.head()
       <th>overview</th>
       <th>popularity</th>
       <th>production_companies</th>
-      <th>...</th>
+      <th>production_countries</th>
       <th>release_date</th>
       <th>revenue</th>
       <th>runtime</th>
@@ -97,13 +96,12 @@ df.head()
       <th>title</th>
       <th>vote_average</th>
       <th>vote_count</th>
-      <th>profit</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>237000000</td>
+      <td>237000000.0</td>
       <td>[{"id": 28, "name": "Action"}, {"id": 12, "nam...</td>
       <td>http://www.avatarmovie.com/</td>
       <td>19995</td>
@@ -113,7 +111,7 @@ df.head()
       <td>In the 22nd century, a paraplegic Marine is di...</td>
       <td>150.437577</td>
       <td>[{"name": "Ingenious Film Partners", "id": 289...</td>
-      <td>...</td>
+      <td>[{"iso_3166_1": "US", "name": "United States o...</td>
       <td>2009-12-10</td>
       <td>2787965087</td>
       <td>162.0</td>
@@ -123,11 +121,10 @@ df.head()
       <td>Avatar</td>
       <td>7.2</td>
       <td>11800</td>
-      <td>2550965087</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>300000000</td>
+      <td>300000000.0</td>
       <td>[{"id": 12, "name": "Adventure"}, {"id": 14, "...</td>
       <td>http://disney.go.com/disneypictures/pirates/</td>
       <td>285</td>
@@ -137,7 +134,7 @@ df.head()
       <td>Captain Barbossa, long believed to be dead, ha...</td>
       <td>139.082615</td>
       <td>[{"name": "Walt Disney Pictures", "id": 2}, {"...</td>
-      <td>...</td>
+      <td>[{"iso_3166_1": "US", "name": "United States o...</td>
       <td>2007-05-19</td>
       <td>961000000</td>
       <td>169.0</td>
@@ -147,11 +144,10 @@ df.head()
       <td>Pirates of the Caribbean: At World's End</td>
       <td>6.9</td>
       <td>4500</td>
-      <td>661000000</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>245000000</td>
+      <td>245000000.0</td>
       <td>[{"id": 28, "name": "Action"}, {"id": 12, "nam...</td>
       <td>http://www.sonypictures.com/movies/spectre/</td>
       <td>206647</td>
@@ -161,7 +157,7 @@ df.head()
       <td>A cryptic message from Bond’s past sends him o...</td>
       <td>107.376788</td>
       <td>[{"name": "Columbia Pictures", "id": 5}, {"nam...</td>
-      <td>...</td>
+      <td>[{"iso_3166_1": "GB", "name": "United Kingdom"...</td>
       <td>2015-10-26</td>
       <td>880674609</td>
       <td>148.0</td>
@@ -171,11 +167,10 @@ df.head()
       <td>Spectre</td>
       <td>6.3</td>
       <td>4466</td>
-      <td>635674609</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>250000000</td>
+      <td>250000000.0</td>
       <td>[{"id": 28, "name": "Action"}, {"id": 80, "nam...</td>
       <td>http://www.thedarkknightrises.com/</td>
       <td>49026</td>
@@ -185,7 +180,7 @@ df.head()
       <td>Following the death of District Attorney Harve...</td>
       <td>112.312950</td>
       <td>[{"name": "Legendary Pictures", "id": 923}, {"...</td>
-      <td>...</td>
+      <td>[{"iso_3166_1": "US", "name": "United States o...</td>
       <td>2012-07-16</td>
       <td>1084939099</td>
       <td>165.0</td>
@@ -195,11 +190,10 @@ df.head()
       <td>The Dark Knight Rises</td>
       <td>7.6</td>
       <td>9106</td>
-      <td>834939099</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>260000000</td>
+      <td>260000000.0</td>
       <td>[{"id": 28, "name": "Action"}, {"id": 12, "nam...</td>
       <td>http://movies.disney.com/john-carter</td>
       <td>49529</td>
@@ -209,7 +203,7 @@ df.head()
       <td>John Carter is a war-weary, former military ca...</td>
       <td>43.926995</td>
       <td>[{"name": "Walt Disney Pictures", "id": 2}]</td>
-      <td>...</td>
+      <td>[{"iso_3166_1": "US", "name": "United States o...</td>
       <td>2012-03-07</td>
       <td>284139100</td>
       <td>132.0</td>
@@ -219,19 +213,87 @@ df.head()
       <td>John Carter</td>
       <td>6.1</td>
       <td>2124</td>
-      <td>24139100</td>
     </tr>
   </tbody>
 </table>
-<p>5 rows × 21 columns</p>
 </div>
+
+
+
+### .apply(lambda x: )
+
+
+```python
+# applyに指定する関数をlambda関数にする
+# まずはreturn_nan_if_zero()をlambda関数にして書いてみる
+f = lambda x: np.nan if x==0 else x
+f(0)
+```
+
+
+
+
+    nan
 
 
 
 
 ```python
-df = df.sort_values('profit', ascending=False)
-df.head()
+df_movies = pd.read_csv('tmdb_5000_movies.csv')
+# budgetとrevenueの0の値をnp.nanにする
+df_movies['budget'] = df_movies['budget'].apply(lambda x: np.nan if x==0 else x)
+df_movies['revenue'] = df_movies['revenue'].apply(lambda x: np.nan if x==0 else x)
+# nanをdrop
+df_movies = df_movies.dropna(subset=['revenue', 'budget'])
+```
+
+### .apply(lambda row: , axis=1)
+
+
+```python
+#行全体を使う
+# revenue - budgetを別カラムで保持したいとする
+df_movies['profit'] = df_movies.apply(lambda row: row['revenue'] - row['budget'], axis=1)
+```
+
+
+```python
+# 最大のprofitをあげたmovieは？
+df_movies.iloc[df_movies['profit'].idxmax()]
+```
+
+
+
+
+    budget                                                           2.37e+08
+    genres                  [{"id": 28, "name": "Action"}, {"id": 12, "nam...
+    homepage                                      http://www.avatarmovie.com/
+    id                                                                  19995
+    keywords                [{"id": 1463, "name": "culture clash"}, {"id":...
+    original_language                                                      en
+    original_title                                                     Avatar
+    overview                In the 22nd century, a paraplegic Marine is di...
+    popularity                                                        150.438
+    production_companies    [{"name": "Ingenious Film Partners", "id": 289...
+    production_countries    [{"iso_3166_1": "US", "name": "United States o...
+    release_date                                                   2009-12-10
+    revenue                                                       2.78797e+09
+    runtime                                                               162
+    spoken_languages        [{"iso_639_1": "en", "name": "English"}, {"iso...
+    status                                                           Released
+    tagline                                       Enter the World of Pandora.
+    title                                                              Avatar
+    vote_average                                                          7.2
+    vote_count                                                          11800
+    profit                                                        2.55097e+09
+    Name: 0, dtype: object
+
+
+
+
+```python
+#フィルタを使っても同様に取得可能
+df_movies[df_movies['profit'] == df_movies['profit'].max()]
 ```
 
 
@@ -281,7 +343,7 @@ df.head()
   <tbody>
     <tr>
       <th>0</th>
-      <td>237000000</td>
+      <td>237000000.0</td>
       <td>[{"id": 28, "name": "Action"}, {"id": 12, "nam...</td>
       <td>http://www.avatarmovie.com/</td>
       <td>19995</td>
@@ -293,7 +355,7 @@ df.head()
       <td>[{"name": "Ingenious Film Partners", "id": 289...</td>
       <td>...</td>
       <td>2009-12-10</td>
-      <td>2787965087</td>
+      <td>2.787965e+09</td>
       <td>162.0</td>
       <td>[{"iso_639_1": "en", "name": "English"}, {"iso...</td>
       <td>Released</td>
@@ -301,113 +363,24 @@ df.head()
       <td>Avatar</td>
       <td>7.2</td>
       <td>11800</td>
-      <td>2550965087</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>200000000</td>
-      <td>[{"id": 18, "name": "Drama"}, {"id": 10749, "n...</td>
-      <td>http://www.titanicmovie.com</td>
-      <td>597</td>
-      <td>[{"id": 2580, "name": "shipwreck"}, {"id": 298...</td>
-      <td>en</td>
-      <td>Titanic</td>
-      <td>84 years later, a 101-year-old woman named Ros...</td>
-      <td>100.025899</td>
-      <td>[{"name": "Paramount Pictures", "id": 4}, {"na...</td>
-      <td>...</td>
-      <td>1997-11-18</td>
-      <td>1845034188</td>
-      <td>194.0</td>
-      <td>[{"iso_639_1": "en", "name": "English"}, {"iso...</td>
-      <td>Released</td>
-      <td>Nothing on Earth could come between them.</td>
-      <td>Titanic</td>
-      <td>7.5</td>
-      <td>7562</td>
-      <td>1645034188</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>150000000</td>
-      <td>[{"id": 28, "name": "Action"}, {"id": 12, "nam...</td>
-      <td>http://www.jurassicworld.com/</td>
-      <td>135397</td>
-      <td>[{"id": 1299, "name": "monster"}, {"id": 1718,...</td>
-      <td>en</td>
-      <td>Jurassic World</td>
-      <td>Twenty-two years after the events of Jurassic ...</td>
-      <td>418.708552</td>
-      <td>[{"name": "Universal Studios", "id": 13}, {"na...</td>
-      <td>...</td>
-      <td>2015-06-09</td>
-      <td>1513528810</td>
-      <td>124.0</td>
-      <td>[{"iso_639_1": "en", "name": "English"}]</td>
-      <td>Released</td>
-      <td>The park is open.</td>
-      <td>Jurassic World</td>
-      <td>6.5</td>
-      <td>8662</td>
-      <td>1363528810</td>
-    </tr>
-    <tr>
-      <th>44</th>
-      <td>190000000</td>
-      <td>[{"id": 28, "name": "Action"}]</td>
-      <td>http://www.furious7.com/</td>
-      <td>168259</td>
-      <td>[{"id": 830, "name": "car race"}, {"id": 3428,...</td>
-      <td>en</td>
-      <td>Furious 7</td>
-      <td>Deckard Shaw seeks revenge against Dominic Tor...</td>
-      <td>102.322217</td>
-      <td>[{"name": "Universal Pictures", "id": 33}, {"n...</td>
-      <td>...</td>
-      <td>2015-04-01</td>
-      <td>1506249360</td>
-      <td>137.0</td>
-      <td>[{"iso_639_1": "en", "name": "English"}]</td>
-      <td>Released</td>
-      <td>Vengeance Hits Home</td>
-      <td>Furious 7</td>
-      <td>7.3</td>
-      <td>4176</td>
-      <td>1316249360</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>220000000</td>
-      <td>[{"id": 878, "name": "Science Fiction"}, {"id"...</td>
-      <td>http://marvel.com/avengers_movie/</td>
-      <td>24428</td>
-      <td>[{"id": 242, "name": "new york"}, {"id": 5539,...</td>
-      <td>en</td>
-      <td>The Avengers</td>
-      <td>When an unexpected enemy emerges and threatens...</td>
-      <td>144.448633</td>
-      <td>[{"name": "Paramount Pictures", "id": 4}, {"na...</td>
-      <td>...</td>
-      <td>2012-04-25</td>
-      <td>1519557910</td>
-      <td>143.0</td>
-      <td>[{"iso_639_1": "en", "name": "English"}]</td>
-      <td>Released</td>
-      <td>Some assembly required.</td>
-      <td>The Avengers</td>
-      <td>7.4</td>
-      <td>11776</td>
-      <td>1299557910</td>
+      <td>2.550965e+09</td>
     </tr>
   </tbody>
 </table>
-<p>5 rows × 21 columns</p>
+<p>1 rows × 21 columns</p>
 </div>
 
 
 
+### .iterrows()
+
 
 ```python
-# csvファイルで保存 index=Falseでindexをカラムとして保存しない
-df.to_csv('tmdb_5000_movies_profit_sorted.csv', index=False)
+# rowをイテレーションさせる イテレータは(idx, row)を返す
+for idx, row in df_movies.iterrows():
+    if row['vote_average'] == 10:
+        print('{} got the higest score!!'.format(row['title']))
+        print('vote counts: {}'.format(row['vote_count']))
+        
+# for _, row in df_movies.iterrows():        idx使わない場合は'＿'
 ```

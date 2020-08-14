@@ -28,6 +28,11 @@
 			- [縦連結](./Pandas/concat.md)
 			- [結合 merge](./Pandas/merge.md)
 
+		- [ユニークな値と数 .unique() .nunique()](./Pandas/uniquenunique.md)
+		- [それぞれの値にいくつのレコードがあるか .value_counts() .sort_values()](./Pandas/value_counts.md)
+
+		- [DataFrameのiteration  .apply() .iterrows() ](./Pandas/applyiterrows.md)
+		- [ピボットテーブルの作り方 .pivot_table() .xs()](./Pandas/pivot_tablexs.md)
 		- [データの表示確認（リスト）](./Pandas/hyouzi.md)
 		- [欠損値の有無の確認](./Pandas/isnull.md)
 			- [**関数** 欠損値の有無の確認](./Pandas/missing_value_table.md)
