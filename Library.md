@@ -117,10 +117,14 @@
     - [箱ひげ図 plt.boxplot()](./Library/Matplotlib/boxplot/boxplot.md)
     - [pltの保存 savefig() PdfPages()](./Library/Matplotlib/pngpdf/pngpdf.md)
 
-
   - [seaboen](./Library/seaborn.md)
     - [集計表とクロス集計](./Library/Seaborn/集計表.md)
-    - [ヒストグラム](./Library/Seaborn/hist.md)<br><br>
+    - [ヒストグラム sns.distplot()](./Library/Seaborn/hist.md)
+    - [散布図+ヒストグラム ペアプロット sns.jointplot() sns.pairplot()](./Library/Seaborn/joinplotpaorplot/joinplotpaorplot.md)
+    - [カテゴリカルプロット sns.barplot() sns.countplot() sns.boxplot() sns.violinplot() sns.swarmplot](./Library/Seaborn/categorical/categorical.md)
+    - [ヒートマップ sns.heatmap()](./Library/Seaborn/heatmap/heatmap.md)
+    - [スタイル変更 pltとの連携 sns.set()](./Library/Seaborn/set/set.md)
+	<br><br>
 
   - [LightGBMとoptunaと交差検証](./Library/optuna_lgb.md)
 	- [LightGBMと複数データのEDA](./Library/PredictFutureSales/PredictFutureSales.md)

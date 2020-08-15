@@ -1,4 +1,4 @@
-# seaborn
+# Seaborn
 
 > データのきれいに視覚化するための機能が豊富なライブラリmatplotlibと併用することが多そう
 > ```python
@@ -17,7 +17,10 @@
 
 - <b>グラフ表示</b>
     - [集計表とクロス集計](./Seaborn/集計表.md)
-    - [ヒストグラム](./Seaborn/hist.md)
-
+    - [ヒストグラム sns.distplot()](./Seaborn/hist.md)
+    - [散布図+ヒストグラム ペアプロット sns.jointplot() sns.pairplot()](./Seaborn/joinplotpaorplot/joinplotpaorplot.md)
+    - [カテゴリカルプロット sns.barplot() sns.countplot() sns.boxplot() sns.violinplot() sns.swarmplot](./Seaborn/categorical/categorical.md)
+    - [ヒートマップ sns.heatmap()](./Seaborn/heatmap/heatmap.md)
+    - [スタイル変更 pltとの連携 sns.set()](./Seaborn/set/set.md)
 
 [戻る](../Overallview.md)

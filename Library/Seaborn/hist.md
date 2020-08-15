@@ -1,5 +1,71 @@
 # ヒストグラムの表示
 
+
+```python
+# seabornはsnsとしてインポート
+import seaborn as sns
+%matplotlib inline
+# 他のライブラリをインポートしておく
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+```
+
+
+```python
+df = pd.read_csv('../../data/138_4508_bundle_archive/tmdb_5000_movies.csv')
+sns.distplot(df['vote_count'])
+```
+
+
+
+
+    <matplotlib.axes._subplots.AxesSubplot at 0x7fcca8188d10>
+
+
+
+
+![png](./image/output_2_1.png)
+
+
+全体を1と置いたときの割合と確率密度関数を表示します。
+
+
+```python
+# normalizeではなくcountを見る
+sns.distplot(df['vote_count'], norm_hist=False, kde=False)
+```
+
+
+
+
+    <matplotlib.axes._subplots.AxesSubplot at 0x7fcc8139a590>
+
+
+
+
+![png](./image/output_4_1.png)
+
+
+## sns.set()
+
+
+```python
+# スタイルが変わる
+sns.set()
+sns.distplot(df['vote_count'])
+```
+
+
+
+
+    <matplotlib.axes._subplots.AxesSubplot at 0x7fcc828aec50>
+
+
+
+
+![png](./image/output_6_1.png)
+
 ```python
 # SibSp配偶者の数と目的変数との関係
 plt.hist(train.loc[train['Survived'] == 0, 'SibSp'].dropna(), bins=20, alpha=0.8, label='0')
@@ -116,6 +182,3 @@ CategoricalAge
 (60.105, 70.052]	0.764706	0.235294
 (70.052, 80.0]	0.800000	0.200000
 ```
-
-### 説明
-
