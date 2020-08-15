@@ -234,6 +234,11 @@
 	- [ニューロンのモデル設計と活性化関数・勾配計算](./Library/torch/NN_activation_gradiation.md)
 
   - [opencv](./Library/opencv.md)
+	
+	- [画像の表示 グレースケール imread() cvtColor(image, cv2.COLOR_BGR2RGB)](./Library/opencv/imread/imread.md)
+	- [cropped 切り取り 画像の保存 image cv2.imwrite()](./Library/opencv/slicing/slicing.md)
+	- [OpenCVによる二値化 単純に閾値を指定して2値化 大津の2値化（Otsu's binarization） Adaptive Thresholding cv2.threshold() cv2.adaptiveThreshold()](./Library/opencv/binarization/binarization.md)
+
 	- **エッジ検出**
 		- [Cannyエッジ検出](./Library/opencv/Canny.md)
 	- [HOGとSVMによる物体検出](./Library/opencv/Object_detection_HoG_SVM.md)
