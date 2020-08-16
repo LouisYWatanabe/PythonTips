@@ -37,6 +37,13 @@
     - [lambda関数](./Embedded/lambda.md)
     - [不特定多数の引数とラッパー関数 *argsと**kwargs](./Embedded/args.md)
 
+    - [ファイルのパスリストの取得・フォルダ作成操作 glob() os pathlib.Path](./Embedded/glob.md)
+    - [プログレスバーとファイルパスデータフレーム tqdm()](./Embedded/tqdm.md)
+    - [NifTI画像データ形式であるCT画像の操作 nibabel()](./Embedded/nibabel/nibabel.md)
+    - [並列処理(multiprocessing.pool)](./Embedded/pool.md)
+    - [関数を別ファイルから呼び出す(autoreload)](./Embedded/autoreload.md)
+
+
 - [**ライブラリ**](./Library.md)
     - [numpy](./Library/numpy.md)
     - [pandas](./Library/pandas.md)
