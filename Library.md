@@ -11,6 +11,7 @@
 		- [変数の種類の確認](./Library/Numpy/unique.md)
 		- [変換 型](./Library/Numpy/astype.md)
 		- [列の取得](./Library/Numpy/列の取得.md)
+		- [配列の順場入れ替え rollaxis()](./Library/Numpy/rollaxis.md)
 	- [一次元 多次元配列の作成・型宣言](./Library/Numpy/stack_arrays.md)
 		- [数値のArrayを関数で作成(arange, linspace, logspace)](./Library/Numpy/arangelinspace.md)
 	- [1次元配列の追加](./Library/Numpy/stack_array.md)
