@@ -176,6 +176,7 @@
 
   - [statsmodels](./Library/statsmodels.md)
 	- [単回帰](./Library/statsmodels/Linear_regression.md)
+
   - [TensorFlow](./Library/tensorflow.md)
 	- [TensorFlowの演算子](./Library/tensorflow/TensorFlowmath.md)
 	- [tf.constant 定数の値を保持する](./Library/tensorflow/tf.constant.md)
@@ -186,6 +187,16 @@
 	- [tf.run opノードを評価し、operationの結果を返す](./Library/tensorflow/tf.run.md)
 	- [tf.train.GradientDescentOptimizer 勾配降下アルゴリズム](./Library/tensorflow/tf.train.GradientDescentOptimizer.md)
 	- [tf.matmul 行列の掛算](./Library/tensorflow/tf.matmul.md)
+	- TensorFlowにおけるモデル作成の流れ
+		- [全結合層によるモデル作成の流れ](./Library/tensorflow/tf2_base/tf2_base.md)
+		- Sequential（積層型）モデル： コンパクトで簡単な書き方
+			- [Sequential（積層型）モデルによるコンパクトで簡単な書き方](./Library/tensorflow/Sequential1/Sequential1.md)
+			- [Sequentialオブジェクトのaddメソッドで追加［tf.keras - Sequential API］](./Library/tensorflow/Sequential2/Sequential2.md)
+		- Functional（関数型）API： 複雑なモデルも定義できる柔軟な書き方
+			- [Modelクラスのコンストラクター利用［tf.keras - Functional API］](./Library/tensorflow/Functional/Functional.md)
+			- [Modelクラスのサブクラス化を利用した書き方](./Library/tensorflow/Functional2/Functional2.md)
+
+
 
   - [keras](./Library/keras.md)
 	- [学習の流れ](./Library/keras/XOR.md)

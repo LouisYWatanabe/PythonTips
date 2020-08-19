@@ -12,3 +12,12 @@
 - [tf.run opノードを評価し、operationの結果を返す](./tensorflow/tf.run.md)
 - [tf.train.GradientDescentOptimizer 勾配降下アルゴリズム](./tensorflow/tf.train.GradientDescentOptimizer.md)
 - [tf.matmul 行列の掛算](./tensorflow/tf.matmul.md)
+
+- TensorFlowにおけるモデル作成の流れ
+    - [全結合層によるモデル作成の流れ](./tensorflow/tf2_base/tf2_base.md)
+    - Sequential（積層型）モデル： コンパクトで簡単な書き方
+        - [Sequential（積層型）モデルによるコンパクトで簡単な書き方](./tensorflow/Sequential1/Sequential1.md)
+        - [Sequentialオブジェクトのaddメソッドで追加［tf.keras - Sequential API］](./tensorflow/Sequential2/Sequential2.md)
+    - Functional（関数型）API： 複雑なモデルも定義できる柔軟な書き方
+        - [Modelクラスのコンストラクター利用［tf.keras - Functional API］](./tensorflow/Functional/Functional.md)
+        - [Modelクラスのサブクラス化を利用した書き方](./tensorflow/Functional2/Functional2.md)
