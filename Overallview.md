@@ -59,6 +59,7 @@
     - [opencv](./Library/opencv.md)
 
     - [XGBClassifier](./Library/scikit-learn/xgboost_XGBClassifier.md)
+    - [XGBRegressor](./Library/scikit-learn/Regression_GBDT_tablemethod/Regression_GBDT_tablemethod.md)
 
     - [nltk](./Library/nltk.md)
 

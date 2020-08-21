@@ -189,6 +189,10 @@
 	- [tf.matmul 行列の掛算](./Library/tensorflow/tf.matmul.md)
 	- TensorFlowにおけるモデル作成の流れ
 		- [全結合層によるモデル作成の流れ](./Library/tensorflow/tf2_base/tf2_base.md)
+		- [全結合層(MLP)でMNIST分類](./Library/tensorflow/MLP_digit/MLP_digit.md)
+		- [MNISTをCNNで分類](./Library/tensorflow/MNIST_CNN_tune/MNIST_CNN_tune.md)
+		- [画像のデータオーギュメンテーション](./Library/tensorflow/DataAugmentation/DataAugmentation.md)
+		- [MNISTをデータオーギュメンテーションしてCNNで分類](./Library/tensorflow/MNIST_CNN_dataaug/MNIST_CNN_dataaug.md)
 		- Sequential（積層型）モデル： コンパクトで簡単な書き方
 			- [Sequential（積層型）モデルによるコンパクトで簡単な書き方](./Library/tensorflow/Sequential1/Sequential1.md)
 			- [Sequentialオブジェクトのaddメソッドで追加［tf.keras - Sequential API］](./Library/tensorflow/Sequential2/Sequential2.md)
@@ -244,6 +248,7 @@
 	- [動的な計算グラフの可視化 torchviz.makedot](./Library/torch/makedot.md)
 
 	- [ニューロンのモデル設計と活性化関数・勾配計算](./Library/torch/NN_activation_gradiation.md)
+  - [Hyperopt:パラメターチューニングの流れ](./Library/hyperopt.md)
 
   - [opencv](./Library/opencv.md)
 	

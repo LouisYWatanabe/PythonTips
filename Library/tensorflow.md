@@ -15,9 +15,14 @@
 
 - TensorFlowにおけるモデル作成の流れ
     - [全結合層によるモデル作成の流れ](./tensorflow/tf2_base/tf2_base.md)
+    - [全結合層(MLP)でMNIST分類](./tensorflow/MLP_digit/MLP_digit.md)
+    - [MNISTをCNNで分類](./tensorflow/MNIST_CNN_tune/MNIST_CNN_tune.md)
+    - [画像のデータオーギュメンテーション](./tensorflow/DataAugmentation/DataAugmentation.md)
+    - [MNISTをデータオーギュメンテーションしてCNNで分類](./tensorflow/MNIST_CNN_dataaug/MNIST_CNN_dataaug.md)
     - Sequential（積層型）モデル： コンパクトで簡単な書き方
         - [Sequential（積層型）モデルによるコンパクトで簡単な書き方](./tensorflow/Sequential1/Sequential1.md)
         - [Sequentialオブジェクトのaddメソッドで追加［tf.keras - Sequential API］](./tensorflow/Sequential2/Sequential2.md)
     - Functional（関数型）API： 複雑なモデルも定義できる柔軟な書き方
         - [Modelクラスのコンストラクター利用［tf.keras - Functional API］](./tensorflow/Functional/Functional.md)
         - [Modelクラスのサブクラス化を利用した書き方](./tensorflow/Functional2/Functional2.md)
+

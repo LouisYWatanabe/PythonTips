@@ -16,6 +16,7 @@ df = pd.concat([df_1, df_2, df_3], join='inner')
 ```
 
 ### 書式
+
 	[]:連結するオブジェクトの指定
 	 axis: 連結方向, `=0`縦、`=1`横
 	 sort:False
