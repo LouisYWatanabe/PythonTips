@@ -13,7 +13,8 @@ kaggleでpandasを使用していると、とんでもなく重いデータを�
 引用元：https://www.kaggle.com/fabiendaniel/elo-world
 
 ## データフレームのメモリ削減関数
-```python:script.py
+
+```python
 import pandas as pd
 import numpy as np
 
@@ -53,7 +54,7 @@ csvから読み込んだデータなどは、データ型を指定しなけれ�
 上記コードは、カラムのデータ型がintかfloatの場合に最大値・最小値を鑑みて、適切なデータ型を指定するようにできています。
 
 #### 使用例
-```python:script.py
+```python
 print('Importing data...')
 historical_transactions = pd.read_csv('historical_transactions.csv')
 print('start size: {:5.2f} Mb'.format(historical_transactions.memory_usage().sum() / 1024**2))
