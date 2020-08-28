@@ -193,6 +193,7 @@
 		- [MNISTをCNNで分類](./Library/tensorflow/MNIST_CNN_tune/MNIST_CNN_tune.md)
 		- [画像のデータオーギュメンテーション](./Library/tensorflow/DataAugmentation/DataAugmentation.md)
 		- [MNISTをデータオーギュメンテーションしてCNNで分類](./Library/tensorflow/MNIST_CNN_dataaug/MNIST_CNN_dataaug.md)
+		- [CNNで2値画像分類](./Library/tensorflow/transfor_image/transfor_image.md)
 		- [CIFAR-10でCNNをアンサンブル](./Library/tensorflow/CIFAR10_CNN.md)
 		- Sequential（積層型）モデル： コンパクトで簡単な書き方
 			- [Sequential（積層型）モデルによるコンパクトで簡単な書き方](./Library/tensorflow/Sequential1/Sequential1.md)
@@ -200,12 +201,6 @@
 		- Functional（関数型）API： 複雑なモデルも定義できる柔軟な書き方
 			- [Modelクラスのコンストラクター利用［tf.keras - Functional API］](./Library/tensorflow/Functional/Functional.md)
 			- [Modelクラスのサブクラス化を利用した書き方](./Library/tensorflow/Functional2/Functional2.md)
-
-
-
-  - [keras](./Library/keras.md)
-	- [学習の流れ](./Library/keras/XOR.md)
-	- [MNIST](./Library/keras/MNIST.md)
 
   - [PyTorch](./Library/torch.md)
 	- [ カスタムデータセット化（画像）](./Library/torch/custum_data/custum_data.md)
