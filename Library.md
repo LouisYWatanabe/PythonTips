@@ -118,7 +118,7 @@
     - [箱ひげ図 plt.boxplot()](./Library/Matplotlib/boxplot/boxplot.md)
     - [pltの保存 savefig() PdfPages()](./Library/Matplotlib/pngpdf/pngpdf.md)
 
-  - [seaboen](./Library/seaborn.md)
+  - [seaborn](./Library/seaborn.md)
     - [集計表とクロス集計](./Library/Seaborn/集計表.md)
     - [ヒストグラム sns.distplot()](./Library/Seaborn/hist.md)
     - [散布図+ヒストグラム ペアプロット sns.jointplot() sns.pairplot()](./Library/Seaborn/joinplotpaorplot/joinplotpaorplot.md)
