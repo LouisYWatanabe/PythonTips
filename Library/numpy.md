@@ -29,6 +29,7 @@
 	- [乱数 random](./Numpy/rand.md)
 	- [統計量 標準偏差最大・最小値 標準偏差](./Numpy/Statistics.md)
 	- [数学用関数 平方根 np.sqrt() 対数 np.log() 指数関数 np.exp() ネイピア数 np.e 合計 np.sum 絶対値 np.abs()](./Numpy/Mathfunction.md)
+	- [線形代数 内積 np.dot() 逆行列 np.linalg.inv() 固有値と固有値ベクトル np.linalg.eig()](./Numpy/Linear_algebra.md)
 	- [NumpyにおけるNaNの扱い np.nanとnp.isnan()](./Numpy/NaN.md)
 	- [NumpyにおけるNaNの扱い](./Numpy/NaN.md)
 	- [ndarrayの中の要素の操作 np.clip(a, a_min, a_max) np.where() all() any() np.unique()](./Numpy/ndarraycondition.md)
