@@ -1143,13 +1143,16 @@ plt.ylabel('Rainfall [mm]', fontsize=16)
 
 今まで作成した移動平均をK-S検定（コルモゴロフ-スミルノフ検定）して正規分布と差があるかどうかを調べてみます。
 
+ただ、K-S検定で平滑化したデータの正規分布性による選択を行う場合、平滑化前後の値を引きノイズ値を算出し、そのノイズ値を検定する必要があります。
+
+[スペクトル・時系列データの前処理の方法～平滑化 (スムージング) と微分～](https://datachemeng.com/preprocessspectratimeseriesdata/)
 
 ```python
 from scipy import stats
 
 for data in df_temp:
     # print(data)
-    pv = stats.kstest(df_temp[data], 'norm')[1]
+    pv = stats.kstest(df_temp[data], 'norm').pvalue
     print('p-value:{}'.format(str(pv)))
     # p値が0.05以上の時、データは帰無仮説である
     # 仮定した正規分布に一致している可能性がある
